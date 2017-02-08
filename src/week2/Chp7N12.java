@@ -1,10 +1,10 @@
-package elementary;
+package week2;
 
 /**
  *
  * @author joshu_000
  */
-public class Chp6N38 {
+public class Chp7N12 {
 
     public static char getRandomCharacter(char ch1, char ch2) {
         return (char) (ch1 + Math.random() * (ch2 - ch1 + 1));

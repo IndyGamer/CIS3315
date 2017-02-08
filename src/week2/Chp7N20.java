@@ -1,4 +1,4 @@
-package elementary;
+package week2;
 
 /**
  *
