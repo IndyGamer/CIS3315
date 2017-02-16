@@ -9,86 +9,79 @@ package week3;
  *
  * @author 55allenjn05
  */
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
 public class ChessBoardTest {
 
-    import org.junit.After ;
-    import org.junit.AfterClass ;
-    import org.junit.Before ;
-    import org.junit.BeforeClass ;
-    import org.junit.Test ;
-    import static org.junit.Assert.
+    public ChessBoardTest() {
+    }
 
-    *;
+    @BeforeClass
+    public static void setUpClass() {
+    }
 
-/**
- *
- * @author Administrator
- */
-public class ChessBoardTest {
+    @AfterClass
+    public static void tearDownClass() {
+    }
 
-        public ChessBoardTest() {
-        }
+    @Before
+    public void setUp() {
+    }
 
-        @BeforeClass
-        public static void setUpClass() {
-        }
+    @After
+    public void tearDown() {
+    }
 
-        @AfterClass
-        public static void tearDownClass() {
-        }
+    /**
+     * Test of move method, of class ChessBoard.
+     */
+    @Test
+    public void testMove() {
+        System.out.println("move");
+        int rowFrom = 1;
+        int colFrom = 0;
+        int rowTo = 3;
+        int colTo = 0;
+        ChessBoard instance = new ChessBoard();
+        instance.move(rowFrom, colFrom, rowTo, colTo);
+        assertEquals(instance.board[rowFrom][colFrom], '-');
+        assertEquals(instance.board[rowTo][colTo], 'p');
+    }
 
-        @Before
-        public void setUp() {
-        }
+    /**
+     * Test of reset method, of class ChessBoard.
+     */
+    @Test
+    public void testReset() {
+        System.out.println("reset");
+        int rowFrom = 1;
+        int colFrom = 0;
+        int rowTo = 3;
+        int colTo = 0;
+        ChessBoard instance = new ChessBoard();
+        instance.move(1, 0, 3, 0);
+        instance.reset();
+        assertEquals(instance.board[rowFrom][colFrom], 'p');
+        assertEquals(instance.board[rowTo][colTo], '-');
+    }
 
-        @After
-        public void tearDown() {
-        }
-
-        /**
-         * Test of move method, of class ChessBoard.
-         */
-        @Test
-        public void testMove() {
-            System.out.println("move");
-            int rowFrom = 1;
-            int colFrom = 0;
-            int rowTo = 3;
-            int colTo = 0;
-            ChessBoard instance = new ChessBoard();
-            instance.move(rowFrom, colFrom, rowTo, colTo);
-            assertEquals(instance.board[rowFrom][colFrom], '-');
-            assertEquals(instance.board[rowTo][colTo], 'p');
-        }
-
-        /**
-         * Test of reset method, of class ChessBoard.
-         */
-        @Test
-        public void testReset() {
-            System.out.println("reset");
-            int rowFrom = 1;
-            int colFrom = 0;
-            int rowTo = 3;
-            int colTo = 0;
-            ChessBoard instance = new ChessBoard();
-            instance.move(1, 0, 3, 0);
-            instance.reset();
-            assertEquals(instance.board[rowFrom][colFrom], 'p');
-            assertEquals(instance.board[rowTo][colTo], '-');
-        }
-
-        /**
-         * Test of toString method, of class ChessBoard.
-         */
-        @Test
-        public void testToString() {
-            System.out.println("toString");
-            ChessBoard instance = new ChessBoard();
-            String expResult = "";
-            String result = instance.toString();
-            assertNotEquals(expResult, result);
-
-        }
+    /**
+     * Test of toString method, of class ChessBoard.
+     */
+    @Test
+    public void testToString() {
+        System.out.println("toString");
+        ChessBoard instance = new ChessBoard();
+        String expResult = "";
+        String result = instance.toString();
+        assertNotEquals(expResult, result);
+        
+    }
 
     }
