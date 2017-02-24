@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package week4;
+package week4.chapter11;
 
 import java.time.LocalDate;
 
@@ -155,6 +155,7 @@ class Faculty extends Employee {
         this.officeHours = officeHours;
     }
 
+    @Override
     public String toString() {
         return "Faculty " + getName();
     }
@@ -181,6 +182,7 @@ class Staff extends Employee {
         this.title = title;
     }
 
+    @Override
     public String toString() {
         return "Staff " + getName();
     }
@@ -192,5 +194,6 @@ class C11N2Test {
     public static void main(String[] args) {
         C11N2Person p1 = new C11N2Person("Joe", "123 Main", "123-4567", "test@ex.com");
         System.out.println("p1=" + p1);
+    
     }
 }
