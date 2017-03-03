@@ -23,21 +23,11 @@ public class C13N16 {
     }
 }
 
-/**
- * Class to work with rational numbers.
- *
- * @author John Phillips
- */
 class Rational {
 
     int numerator;
     int denominator;
 
-    /**
-     * Construct new Rational from String in form of "3/4".
-     *
-     * @param s
-     */
     public Rational(String s) {
         String[] sArray = s.split("/");
         numerator = Integer.parseInt(sArray[0]);
@@ -49,12 +39,6 @@ class Rational {
         this.denominator = denominator;
     }
 
-    /**
-     * Process expression in form of "3/4 + 1/5".
-     *
-     * @param s
-     * @return
-     */
     public static Rational parseExpression(String s) {
         String[] sArray = s.split(" ");
         Rational op1 = new Rational(sArray[0]);

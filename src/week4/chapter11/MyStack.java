@@ -29,7 +29,7 @@ public class MyStack  extends ArrayList<Object> {
     }
 
 
-    @Override /** Override the toString in the Object class */
+    @Override
     public String toString() {
         return "stack: " + super.toString();
     }
